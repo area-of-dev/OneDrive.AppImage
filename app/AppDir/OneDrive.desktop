@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=OneDrive Client
+GenericName=OneDrive Client
+Comment=Free One Drive client, command line application
+Exec=AppRun
+Icon=onedrive
+Terminal=false
+Type=Application
+StartupWMClass=onedrive;
+Categories=Network;RemoteAccess;
