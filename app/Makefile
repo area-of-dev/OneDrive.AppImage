@@ -20,13 +20,12 @@ all: clean init
 	mkdir --parents $(PWD)/build/Boilerplate.AppDir
 
 	curl -fsS https://dlang.org/install.sh | bash -s dmd
-	source ~/dlang/dmd-2.100.2/activate
 
 	git clone https://github.com/abraunegg/onedrive.git $(PWD)/build/onedrive
 
-	source ~/dlang/dmd-2.100.0/activate && cd $(PWD)/build/onedrive && ./configure --enable-notifications  --prefix=$(PWD)/build/tmp
-	source ~/dlang/dmd-2.100.0/activate && cd $(PWD)/build/onedrive && make clean; make
-	source ~/dlang/dmd-2.100.0/activate && cd $(PWD)/build/onedrive && make install
+	source ~/dlang/dmd-*/activate && cd $(PWD)/build/onedrive && ./configure --enable-notifications  --prefix=$(PWD)/build/tmp
+	source ~/dlang/dmd-*/activate && cd $(PWD)/build/onedrive && make clean; make
+	source ~/dlang/dmd-*/activate && cd $(PWD)/build/onedrive && make install
 
 	mkdir --parents $(PWD)/build/Boilerplate.AppDir
 	$(PWD)/bin/Apprepo.AppImage --destination=$(PWD)/build appdir boilerplate \
