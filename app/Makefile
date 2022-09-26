@@ -20,6 +20,7 @@ all: clean init
 	mkdir --parents $(PWD)/build/Boilerplate.AppDir
 
 	curl -fsS https://dlang.org/install.sh | bash -s dmd
+	source ~/dlang/dmd-2.100.2/activate
 
 	git clone https://github.com/abraunegg/onedrive.git $(PWD)/build/onedrive
 
