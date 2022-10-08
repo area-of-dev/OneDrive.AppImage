@@ -4,7 +4,18 @@ GenericName=OneDrive Client
 Comment=Free One Drive client, command line application
 Exec=AppRun
 Icon=onedrive
-Terminal=false
+Terminal=true
 Type=Application
 StartupWMClass=onedrive;
 Categories=Network;RemoteAccess;
+Actions=synchronize;monitor;
+
+
+[Desktop Action synchronize]
+Name=OneDrive Client - synchronize
+Exec=AppRun --synchronize
+
+
+[Desktop Action monitor]
+Name=OneDrive Client - monitor
+Exec=AppRun --monitor
